@@ -1,0 +1,38 @@
+#dest:
+#  logUrl: http://localhost:8080/app
+#  redisDataKey: hotphone
+#  param: logStr
+#  topic: userLog
+mybatis:
+  configuration:
+    mapUnderscoreToCamelCase: true
+
+spring:
+#  kafka:
+#    bootstrap-servers: hadoop102:9092
+#  elasticsearch:
+#    uris: http://hadoop102:9200
+  datasource:
+    dynamic:
+      primary: mysql
+      strict: false
+      datasource:
+        mysql:
+          url: jdbc:mysql://rm-bp15r11l338b43537ro.rwlb.rds.aliyuncs.com:3306/gmall?serverTimezone=Asia/Shanghai&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+          username: xuhao
+          password: "Xh888888!"
+          driver-class-name: com.mysql.cj.jdbc.Driver
+#        ck:
+#          url: jdbc:clickhouse://hadoop102:8123/default
+#          username:
+#          password:
+#          driver-class-name: ru.yandex.clickhouse.ClickHouseDriver
+#        hbase:
+#          url: jdbc:phoenix:hadoop102,hadoop103,hadoop104:2181
+#          username:
+#          password:
+#          driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver
+#  data:
+#    redis:
+#      host: hadoop102
+#      port: 6379
